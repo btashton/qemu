@@ -1,3 +1,10 @@
+Building for NuttX on Fedora 33
+./configure --target-list=mipsel-softmmu --python=/usr/bin/python2 --disable-werror
+make -j
+
+./mipsel-softmmu/qemu-system-mipsel   -machine pic32mx7-explorer16   -nographic -monitor none   -serial stdio   -kernel  ~/nuttx/wrk/nuttx/nuttx.hex
+
+
 Read the documentation in qemu-doc.html or on http://wiki.qemu-project.org
 
 - QEMU team
